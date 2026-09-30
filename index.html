@@ -53,9 +53,13 @@
       position: absolute;
       display: block;
       cursor: pointer;
+      z-index: 10;
 
-      border: 2px solid transparent;
+      border: 2px solid red;
       border-radius: 8px;
+
+      /* TEMPORARY — lets us see the clickable areas */
+      background: rgba(255, 0, 0, 0.15);
 
       transition:
         transform 0.15s ease,
@@ -63,9 +67,11 @@
         background 0.15s ease;
     }
 
+    /* HOVER EFFECT */
     .hotspot:hover {
       transform: scale(1.08);
-      background: rgba(180, 120, 255, 0.12);
+
+      background: rgba(180, 120, 255, 0.20);
 
       filter:
         brightness(1.35)
@@ -73,39 +79,49 @@
     }
 
     /*
-      SOCIAL BUTTON LOCATIONS
+      ========================================
+      SOCIAL GEM HOTSPOTS
+      ========================================
 
-      These percentages can be adjusted later
-      to sit perfectly over your artwork.
+      These are positioned vertically over
+      the four gem sockets in GITHUB NEW.png.
+
+      The red boxes are temporary so we can
+      visually fine-tune their positions.
     */
 
+    /* TWITCH — Purple Gem */
     .twitch {
-      left: 3%;
-      bottom: 4%;
-      width: 5%;
-      height: 9%;
+      left: 5%;
+      top: 32.6%;
+      width: 7.2%;
+      height: 12.1%;
     }
 
+    /* INSTAGRAM — Pink Gem */
     .instagram {
-      left: 9%;
-      bottom: 4%;
-      width: 5%;
-      height: 9%;
+      left: 5%;
+      top: 47.1%;
+      width: 7.2%;
+      height: 12.1%;
     }
 
+    /* TIKTOK — Blue Gem */
     .tiktok {
-      left: 15%;
-      bottom: 4%;
-      width: 5%;
-      height: 9%;
+      left: 5%;
+      top: 61.3%;
+      width: 7.2%;
+      height: 12.1%;
     }
 
+    /* YOUTUBE — Red Gem */
     .youtube {
-      left: 21%;
-      bottom: 4%;
-      width: 5%;
-      height: 9%;
+      left: 5%;
+      top: 75.6%;
+      width: 7.2%;
+      height: 12.1%;
     }
+
   </style>
 </head>
 
@@ -118,6 +134,7 @@
       class="hotspot twitch"
       href="YOUR-TWITCH-URL"
       target="_blank"
+      rel="noopener noreferrer"
       aria-label="TRIIXXRR on Twitch">
     </a>
 
@@ -126,6 +143,7 @@
       class="hotspot instagram"
       href="YOUR-INSTAGRAM-URL"
       target="_blank"
+      rel="noopener noreferrer"
       aria-label="TRIIXXRR on Instagram">
     </a>
 
@@ -134,6 +152,7 @@
       class="hotspot tiktok"
       href="YOUR-TIKTOK-URL"
       target="_blank"
+      rel="noopener noreferrer"
       aria-label="TRIIXXRR on TikTok">
     </a>
 
@@ -142,6 +161,7 @@
       class="hotspot youtube"
       href="YOUR-YOUTUBE-URL"
       target="_blank"
+      rel="noopener noreferrer"
       aria-label="TRIIXXRR on YouTube">
     </a>
 
