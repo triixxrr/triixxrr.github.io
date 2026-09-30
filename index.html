@@ -2,12 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
-
   <title>TRIIXXRR</title>
 
   <style>
@@ -34,13 +32,10 @@
     /* 16:9 GAME SCREEN */
     .game-screen {
       position: relative;
-
       width: min(100vw, calc(100vh * 16 / 9));
       aspect-ratio: 16 / 9;
 
-      background-image:
-        url("GITHUB NEW.png");
-
+      background-image: url("GITHUB NEW.png");
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
@@ -48,18 +43,15 @@
       overflow: hidden;
     }
 
-    /* CLICKABLE HOTSPOTS */
+    /* CLICKABLE GEM HOTSPOTS */
     .hotspot {
       position: absolute;
       display: block;
       cursor: pointer;
       z-index: 10;
 
-      border: 2px solid red;
-      border-radius: 8px;
-
-      /* TEMPORARY — lets us see the clickable areas */
-      background: rgba(255, 0, 0, 0.15);
+      border: none;
+      background: transparent;
 
       transition:
         transform 0.15s ease,
@@ -67,30 +59,17 @@
         background 0.15s ease;
     }
 
-    /* HOVER EFFECT */
+    /* SUBTLE INTERACTION WHEN HOVERING */
     .hotspot:hover {
       transform: scale(1.08);
-
-      background: rgba(180, 120, 255, 0.20);
+      background: rgba(180, 120, 255, 0.08);
 
       filter:
         brightness(1.35)
         drop-shadow(0 0 8px #9d65ff);
     }
 
-    /*
-      ========================================
-      SOCIAL GEM HOTSPOTS
-      ========================================
-
-      These are positioned vertically over
-      the four gem sockets in GITHUB NEW.png.
-
-      The red boxes are temporary so we can
-      visually fine-tune their positions.
-    */
-
-    /* TWITCH — Purple Gem */
+    /* TWITCH */
     .twitch {
       left: 5%;
       top: 32.6%;
@@ -98,7 +77,7 @@
       height: 12.1%;
     }
 
-    /* INSTAGRAM — Pink Gem */
+    /* INSTAGRAM */
     .instagram {
       left: 5%;
       top: 47.1%;
@@ -106,7 +85,7 @@
       height: 12.1%;
     }
 
-    /* TIKTOK — Blue Gem */
+    /* TIKTOK */
     .tiktok {
       left: 5%;
       top: 61.3%;
@@ -114,14 +93,13 @@
       height: 12.1%;
     }
 
-    /* YOUTUBE — Red Gem */
+    /* YOUTUBE */
     .youtube {
       left: 5%;
       top: 75.6%;
       width: 7.2%;
       height: 12.1%;
     }
-
   </style>
 </head>
 
